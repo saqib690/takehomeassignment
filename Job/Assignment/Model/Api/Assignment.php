@@ -148,10 +148,11 @@ class Assignment implements AssignmentInterface
     * Convert the result to the specified unit.
     *
     * @param int $value 
-    * @param string $unit 
+    * @param string $conversionUnit 
+    * @param string $type
     * @return int 
     */
-    private function convertToUnit($value, $conversionUnit, $type, DateTime $start, DateTime $end)
+    private function convertToUnit($value, $conversionUnit, $type)
     {
         if ($type == 'weeks') {
             $value = $value * 7; // Convert weeks to days
@@ -164,10 +165,9 @@ class Assignment implements AssignmentInterface
             case 'hours':
                 return $value * 24;
             case 'years':
-                return $value / 365; // Convert other types to years
+                return $value / 365;
             default:
                 return $value;
         }
     }
-
 }
