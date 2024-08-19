@@ -61,3 +61,4 @@ Stability: Stable Build
 
 ## Install
     The Job_Assignment module is installed automatically (using the native Magento install mechanism) without any additional actions.
+    Just keep the Job folder in app/code directory of magento project
